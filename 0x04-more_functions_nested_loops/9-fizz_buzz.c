@@ -1,35 +1,36 @@
-#ifndef MAIN_H
-#define MAIN_H
-
+#include "main.h"
 #include <stdio.h>
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-	do {
-		_putchar(num + 48);
-		num++;
-	} while (num >= 0 && num <= 9);
-	_putchar('\n');
-}
-	_putchar('\n');
-}
-			printf("Buzz");
-		else if (num % 3 == 0 && num % 5 == 0)
-			printf("FizzBuzz");
-		else
-			printf("%d", num);
+/**
+ * main - prints the numbers from 1 to 100, followed by a new line
+ * but for multiples of three prints Fizz instead of the number
+ * and for the multiples of five prints Buzz
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
 
-		if (num != 100)
-			printf(" ");
-		else
-			printf("\n");
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 != 0)
+		{
+			printf(" Fizz");
+		} else if (i % 5 == 0 && i % 3 != 0)
+		{
+			printf(" Buzz");
+		} else if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf(" FizzBuzz");
+		} else if (i == 1)
+		{
+			printf("%d", i);
+		} else
+		{
+			printf(" %d", i);
+		}
 	}
+	printf("\n");
 
 	return (0);
 }
